@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Words in Action - Acting</title>
+</head>
+<body>
+    <div class="mainContent">
+        <h1>Let's set the scene!</h1>
+
+        <a onclick="getRandomWords()">Generate</a>
+
+        <ul>
+            <li>Your setting: <span id="setting"></span></li>
+            <li>Your character: <span id="character"></span></li>
+            <li>Your challenge: <span id="challenge"></span></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        const settings = ["Crystal Palace", "Rock & Roll Museum", "Moon Base", "A Gloomy Swamp", "Old House by the Sea", "A Navy Ship","The Top of a Waterfall", "A Beautiful and Romantic Spot in Paris", "A Steel Factory", "A Spaceship","The Dead Sea","The Ocean Bottom", "An Empty Bowling Alley", "Yankee Stadium", "The Coliseum in Rome", "The Rim of the Grand Canyon", "A Snow Covered Mountain Slope", "An Abandoned Mine", "A Jet Fighter", "A Walkway over a Giant Vat of Bubbling Liquid", "An Old Fort in Texas", "A Restaurant Full of Aliens","An Oasis in the Desert", "On Board a Mars Lander", "A Room Full of Monkeys", "A WIld West Town", "A Wizard’s Den", "The Western Plains Where the Buffalo Roam", "A Cavern Full of Bats", "A 100 Foot Long Yacht", "A Secret Garden", "A Giant Pizza Factory", "Inside a Pyramid", "A Glass House", "A Jungle Path", "A Puppet Theater", "A Tree House", "A Thingamajig Factory", "A Building Filled with Smoke", "A Cellar in an Old Castle", "A Very Tall Building", "A San Francisco Cable Car"];
+        const characters = ["Flip - A Chattering Alien", "Basil - A Computer Brained Person", "Quattro - A four-eyed Monster", "Mickee - A Cave Dweller", "Mirabella - Ruler of a Lost City", "Alex - Fashion Designer", "Miguel - Mysterious Scientist", "Edgar - a One-eyed Detective", "Brophy - Special Forces Sergeant", "Abe - an Inventor", "Gif - A Speedboat Driver", "Lucy - A Racecar Driver", "Badoura - Winner of Miss Saturn contest", "Kilrog - Crime Scene Investigator", "Tanri Tool - Space Station Technician", "Snark - an Explorer", "Argo - A Sailor", "Jam - An Artist", "Pie Jaw - The Robot", "Harriet - A Collector of weird hats", "Charla- Possessor of magical powers", "Nigel - the Mind Reader", "Fred - A Server at a Space Juice Bar", "Reuben - A Warrior", "Klutz - a skateboarder", "Chi Chi - Diamond Smuggler", "Lumps - A Football Player", "Bo the Big - A Giant Elf", "Oriana - A super Fast Runner", "Gloria - A Fortune Teller", "Ozzie - the talking elephant", "Grunge - a Rock Musician", "Humphrey - An Astronomer", "Loki - a famous Actor", "Nick - a cook", "Lincoln - A Secret Agent", "Percy Melon - A Make-up Artist", "Shammus - Space Explorer", "Bart - a ghost", "Dusty - A cowboy", "Coyote - a trickster", "Gusto - a hockey announcer", "Toots - a traffic officer", "Bob - a big cat trainer"];
+        const challenges = ["Surrounded by sticky goo", "Mistaken identity and mobbed by fans", "Stuck in the desert with no water", "A computer virus shuts everything down", "The Earth keeps shaking", "Attacked by a clown", "A scratching sound", "No place to hide but a pile of rotting plants", "Two minutes to discover the secret code", "Black licorice stuck on front teeth", "The motor is on fire", "The map will disintegrate in 60 seconds", "Wild animals chasing you", "They’ve become invisible", "Lost in a forest of identical trees", "An undetected gas leak", "Need a titanium shield", "The rope leading to safety is just out of reach", "No known way to stop Gorks", "The walls are melting", "A bottomless pit", "A skeleton discovered", "Outnumbered ten to one", "A shower of flaming meteors", "Surrounded by hyenas", "Endless days of continuous rain", "A runaway truck", "Followed by a shadow", "Bombarded by lightning bolts", "Giant lizards are attacking Earth", "The house is sinking", "Flying serpents with x-ray vision", "Running out of air", "Interrupted by obnoxious party animals", "Abandoned in another galaxy", "A broken leg", "The air is full of jelly", "One hour to live", "Need a million dollars", "There’s no food", "Hordes of orange bugs", "Power blackout", "The Zingo communicator won’t work", "Drop the keys down the sewer drain", "The mountain explodes"];
+
+        function getRandomWords() {
+
+            // sets text to random value in array
+            document.getElementById("setting").innerHTML = settings[Math.floor(Math.random() * settings.length)];
+            document.getElementById("character").innerHTML = characters[Math.floor(Math.random() * characters.length)];
+            document.getElementById("challenge").innerHTML = challenges[Math.floor(Math.random() * challenges.length)];
+        };
+    </script>
+
+</body>
+</html>
