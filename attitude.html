@@ -19,19 +19,19 @@
 
     </div>
     <script type="text/javascript">
-        const tones = ["ovestruck", "anxious", "humble", "analytical", "depressed", "triumphant", "tense", "relieved", "bossy", "romantic", "optimistic", "tragic", "pessimistic", "impatient", "sulking", "tearful", "vengeful", "dazed", "surprised", "shy", "anxious", "shocked", "jealous", "overwhelmed", "bored", "hopeful", "smug", "exhausted", "frightened", "hysterical", "mischievous", "cautious", "guilty", "flustered", "enraged", "embarrassed", "snobbish", "painful", "nervous", "sneaky", "crazed", "suspicious", "confused", "wicked", "sarcastic", "sympathetic", "amazed", "mellow", "zany", "jealous", "tired", "disgusted", "panicky", "confident", "irritated", "relieved", "optimistic"];
+        const tones = ["lovestruck", "anxious", "humble", "analytical", "depressed", "triumphant", "tense", "relieved", "bossy", "romantic", "optimistic", "tragic", "pessimistic", "impatient", "sulking", "tearful", "vengeful", "dazed", "surprised", "shy", "anxious", "shocked", "jealous", "overwhelmed", "bored", "hopeful", "smug", "exhausted", "frightened", "hysterical", "mischievous", "cautious", "guilty", "flustered", "enraged", "embarrassed", "snobbish", "painful", "nervous", "sneaky", "crazed", "suspicious", "confused", "wicked", "sarcastic", "sympathetic", "amazed", "mellow", "zany", "jealous", "tired", "disgusted", "panicky", "confident", "irritated", "relieved", "optimistic"];
         const statements = ["You are so fired.", "I’m so over this.", "I just won a million dollars.", "I feel like I’m about to vomit everywhere.", "You’re doing a great job-Bob.", "Time is money.", "I need an assistant.", "That’s odd.", "…and that’s the way the cookie crumbles.", "Laughter is the best medicine.", "There’s no such thing as a free lunch.", "So many cats...so little time.", "I ate the last cookie.", "Where do you think you’re going?", "What did you say?", "Ummm...could someone please get me some toilet paper?", "This can’t be good.", "What time is it?", "Whatever.", "Why am I tired?", "Did you lock the door?", "I am the greatest.", "I can’t reach this itch.", "Where's Waldo?", "I can’t see anything.", "Where in the world is Carmen SanDiego?", "What? I can’t hear you.", "Stop wiggling for a minute.", "I can’t believe you said that.", "I can’t believe it’s not butter.", "I’ve got a fever of 103.", "Oh good, Captain Adventure has arrived.", "Oh boy, my subscription is running out.", "Your breath is ...interesting.", "Stop staring at the monkeys.", "Liking your own Facebook status is like giving yourself a high five.", "You can’t be late until you show up.", "Was today really necessary?", "Guess what? Humpty Dumpty was pushed.", "Hey look, it’s the President.", "Do I look like Google?", "My word, am I good looking.", "It’s not my fault, it just exploded."];
 
         function getRandomWords() {
-            if (!document.getElementById('submitButton').disabled) {
+            // if (!document.getElementById('submitButton').disabled) {
                 // sets text to random value in array
                 document.getElementById("tone").innerHTML = tones[Math.floor(Math.random() * tones.length)];
                 document.getElementById("statement").innerHTML = statements[Math.floor(Math.random() * statements.length)];
 
                 // disable button
-                document.getElementById('submitButton').disabled = true;
-                document.getElementById('submitButton').style.opacity='0.5';
-            }
+            //     document.getElementById('submitButton').disabled = true;
+            //     document.getElementById('submitButton').style.opacity='0.5';
+            // }
         };
     </script>
 </body>

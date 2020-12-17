@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Words in Action - Random</title>
+    <title>Words in Action - Art</title>
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
             The verb: <span id="verb" class="secondWord"></span>
         </p>
         <p>
-            The description: <span id="adjective" class="thirdWord"></span>
+            The adjective: <span id="adjective" class="thirdWord"></span>
         </p>
 
 <!--        <a href="index.html" class="backLink">< Back</a>-->
@@ -29,16 +29,16 @@
         const adjectives = ["spotted", "hairy", "small", "striped", "round", "tall", "skinny", "happy", "curly", "bumpy", "big", "sad", "long", "grumpy", "silly", "fluffy", "tiny", "sleepy", "angry", "wide", "confused", "nervous", "chubby", "shocked", "grossed-out", "checkered", "stinky", "scared", "scaly", "fuzzy", "lovestruck", "huge", "mad", "disgusted", "hysterical", "surprised", "tired", "miniature", "crazy", "cheerful", "square", "wicked", "tattooed", "squashed", "flat", "slimy", "spiky", "glowing", "crabby", "lumpy", "wild", "frightened", "dotted", "frizzy", "evil", "muscular", "furry", "feathered", "wrinkly", "puffy", "jagged", "prickly", "bouncy", "dented", "drenched", "long-haired", "pointy", "puffed up", "soapy", "scratching", "sparkling", "shaggy", "vicious", "wavy", "wide", "zippered", "thin", "plump", "freezing", "hot", "dizzy", "gloomy"];
 
         function getRandomWords() {
-            if (!document.getElementById('submitButton').disabled) {
+            // if (!document.getElementById('submitButton').disabled) {
                 // sets text to random value in array
                 document.getElementById("noun").innerHTML = nouns[Math.floor(Math.random() * nouns.length)];
                 document.getElementById("verb").innerHTML = verbs[Math.floor(Math.random() * verbs.length)];
                 document.getElementById("adjective").innerHTML = adjectives[Math.floor(Math.random() * adjectives.length)];
 
                 // disable button
-                document.getElementById('submitButton').disabled = true;
-                document.getElementById('submitButton').style.opacity='0.5';
-            }
+            //     document.getElementById('submitButton').disabled = true;
+            //     document.getElementById('submitButton').style.opacity='0.5';
+            // }
         };
     </script>
 

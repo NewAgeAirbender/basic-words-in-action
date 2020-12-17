@@ -25,7 +25,7 @@
 
         function getRandomWords() {
 
-            if (!document.getElementById('submitButton').disabled) {
+            // if (!document.getElementById('submitButton').disabled) {
 
                 // sets text to random value in array
                 document.getElementById("setting").innerHTML = settings[Math.floor(Math.random() * settings.length)];
@@ -33,9 +33,9 @@
                 document.getElementById("challenge").innerHTML = challenges[Math.floor(Math.random() * challenges.length)];
 
                 // disable button
-                document.getElementById('submitButton').disabled = true;
-                document.getElementById('submitButton').style.opacity='0.5';
-            }
+            //     document.getElementById('submitButton').disabled = true;
+            //     document.getElementById('submitButton').style.opacity='0.5';
+            // }
         };
     </script>
 
