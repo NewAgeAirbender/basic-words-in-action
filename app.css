@@ -1,0 +1,150 @@
+.mainContent {
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #606c71;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h3 {
+  margin-bottom: 2rem;
+}
+
+p {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+p:last-child {
+  margin: 2rem 0 6rem 0;
+}
+
+.backLink {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.firstWord {
+  color: darkred;
+}
+
+.secondWord {
+  color: darkblue;
+}
+
+.thirdWord {
+  color: darkgoldenrod;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  padding: 1.25rem 2rem;
+  font-size: 1rem;
+  border-radius: 3.5rem/100%;
+  position: relative;
+  min-width: 15rem;
+  max-width: 90vw;
+  overflow: hidden;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 330ms;
+  margin: 1rem;
+  outline: none;
+}
+.btn + .btn {
+  margin-top: 1rem;
+}
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+.btn:before {
+  content: "";
+  background-color: #21D4FD;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(4) translateX(-100%);
+  transition: all 495ms ease-out;
+}
+.btn:hover:before, .btn:focus:before, .btn:active:before {
+  transform: scale(4) translate(37%);
+}
+
+.btn--alpha {
+  background-color: #21D4FD;
+  color: #B721FF !important;
+}
+.btn--alpha:before {
+  background-color: #B721FF;
+  background-image: linear-gradient(to right, #B721FF 30%, #21D4FD 100%);
+  position: absolute;
+}
+.btn--alpha:hover, .btn--alpha:focus, .btn--alpha:active {
+  color: #21D4FD !important;
+}
+
+.btn--beta {
+  background-color: #08AEEA;
+  color: #2AF598 !important;
+}
+.btn--beta:before {
+  background-color: #2AF598;
+  background-image: linear-gradient(to right, #2AF598 30%, #08AEEA 100%);
+  position: absolute;
+}
+.btn--beta:hover, .btn--beta:focus, .btn--beta:active {
+  color: #08AEEA !important;
+}
+
+.btn--gamma {
+  background-color: #FEE140;
+  color: #FA709A !important;
+}
+.btn--gamma:before {
+  background-color: #FA709A;
+  background-image: linear-gradient(to right, #FA709A 30%, #FEE140 100%);
+  position: absolute;
+}
+.btn--gamma:hover, .btn--gamma:focus, .btn--gamma:active {
+  color: #FEE140 !important;
+}
+
+.btn--delta {
+  background-color: #3EECAC;
+  color: #EE74E1 !important;
+}
+.btn--delta:before {
+  background-color: #EE74E1;
+  background-image: linear-gradient(to right, #EE74E1 30%, #3EECAC 100%);
+  position: absolute;
+}
+.btn--delta:hover, .btn--delta:focus, .btn--delta:active {
+  color: #3EECAC !important;
+}
+
+/*# sourceMappingURL=app.css.map */

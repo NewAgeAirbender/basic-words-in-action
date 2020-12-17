@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Words in Action - Random</title>
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <div class="mainContent">
         <h1>Let's get drawing!</h1>
 
-        <a onclick="getRandomWords()">Generate</a>
+        <a id="submitButton" onclick="getRandomWords()"><button class="btn btn--gamma"><span>Generate</span></button></a>
 
-        <ul>
-            <li>Your setting: <span id="noun"></span></li>
-            <li>Your character: <span id="verb"></span></li>
-            <li>Your challenge: <span id="adjective"></span></li>
-        </ul>
+        <p>
+            Your setting: <span id="noun" class="firstWord"></span>
+        </p>
+        <p>
+            Your character: <span id="verb" class="secondWord"></span>
+        </p>
+        <p>
+            Your challenge: <span id="adjective" class="thirdWord"></span>
+        </p>
+
+<!--        <a href="index.html" class="backLink">< Back</a>-->
     </div>
     <script type="text/javascript">
         const nouns = ["frog", "turtle", "pig", "television", "monkey", "banana", "sailboat", "pizza", "cow", "sun", "bunny", "teddy bear", "dog", "doll", "dinosaur", "toothbrush", "shoe", "heart", "grandma", "shirt", "umbrella", "foot", "pumpkin", "light bulb", "butterfly", "bicycle", "spoon", "spider", "key", "hat", "pencil", "flower", "boy", "computer", "ice cream cone", "milk carton", "bone", "popsicle", "clock", "cloud", "donut", "turkey", "owl", "turkey", "house", "kite", "yo-yo", "book", "whale", "bathtub", "skateboard", "bird", "sheep", "cup", "orange", "bowl", "chair", "fish", "girl", "cat", "carrot", "spaceship", "toothpaste", "peanut", "car", "grasshopper", "giraffe", "tree","balloon", "horn", "star", "apple", "fork", "elephant", "bee", "worm", "ghost", "cupcake", "mouse", "snail", "corn", "pineapple", "fly", "iceberg", "alien", "grapes", "ant", "beetle", "lion", "pig", "pizza", "donut", "moon", "bat", "baseball", "basketball", "football", "hockey stick", "horseshoe", "glasses", "wig"];
@@ -22,10 +29,16 @@
         const adjectives = ["spotted", "hairy", "small", "striped", "round", "tall", "skinny", "happy", "curly", "bumpy", "big", "sad", "long", "grumpy", "silly", "fluffy", "tiny", "sleepy", "angry", "wide", "confused", "nervous", "chubby", "shocked", "grossed-out", "checkered", "stinky", "scared", "scaly", "fuzzy", "lovestruck", "huge", "mad", "disgusted", "hysterical", "surprised", "tired", "miniature", "crazy", "cheerful", "square", "wicked", "tattooed", "squashed", "flat", "slimy", "spiky", "glowing", "crabby", "lumpy", "wild", "frightened", "dotted", "frizzy", "evil", "muscular", "furry", "feathered", "wrinkly", "puffy", "jagged", "prickly", "bouncy", "dented", "drenched", "long-haired", "pointy", "puffed up", "soapy", "scratching", "sparkling", "shaggy", "vicious", "wavy", "wide", "zippered", "thin", "plump", "freezing", "hot", "dizzy", "gloomy"];
 
         function getRandomWords() {
-            // sets text to random value in array
-            document.getElementById("noun").innerHTML = nouns[Math.floor(Math.random() * nouns.length)];
-            document.getElementById("verb").innerHTML = verbs[Math.floor(Math.random() * verbs.length)];
-            document.getElementById("adjective").innerHTML = adjectives[Math.floor(Math.random() * adjectives.length)];
+            if (!document.getElementById('submitButton').disabled) {
+                // sets text to random value in array
+                document.getElementById("noun").innerHTML = nouns[Math.floor(Math.random() * nouns.length)];
+                document.getElementById("verb").innerHTML = verbs[Math.floor(Math.random() * verbs.length)];
+                document.getElementById("adjective").innerHTML = adjectives[Math.floor(Math.random() * adjectives.length)];
+
+                // disable button
+                document.getElementById('submitButton').disabled = true;
+                document.getElementById('submitButton').style.opacity='0.5';
+            }
         };
     </script>
 

@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Words in Action - Acting</title>
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <div class="mainContent">
         <h1>Let's set the scene!</h1>
 
-        <a onclick="getRandomWords()">Generate</a>
+        <a id="submitButton" onclick="getRandomWords()"><button class="btn btn--alpha"><span>Generate</span></button></a>
 
-        <ul>
-            <li>Your setting: <span id="setting"></span></li>
-            <li>Your character: <span id="character"></span></li>
-            <li>Your challenge: <span id="challenge"></span></li>
-        </ul>
+        <p>Your setting: <span id="setting" class="firstWord"></span></p>
+        <p>Your character: <span id="character" class="secondWord"></span></p>
+        <p>Your challenge: <span id="challenge"class="thirdWord"></span></p>
+
+<!--        <a href="index.html" class="backLink">< Back</a>-->
+
     </div>
     <script type="text/javascript">
         const settings = ["Crystal Palace", "Rock & Roll Museum", "Moon Base", "A Gloomy Swamp", "Old House by the Sea", "A Navy Ship","The Top of a Waterfall", "A Beautiful and Romantic Spot in Paris", "A Steel Factory", "A Spaceship","The Dead Sea","The Ocean Bottom", "An Empty Bowling Alley", "Yankee Stadium", "The Coliseum in Rome", "The Rim of the Grand Canyon", "A Snow Covered Mountain Slope", "An Abandoned Mine", "A Jet Fighter", "A Walkway over a Giant Vat of Bubbling Liquid", "An Old Fort in Texas", "A Restaurant Full of Aliens","An Oasis in the Desert", "On Board a Mars Lander", "A Room Full of Monkeys", "A WIld West Town", "A Wizard’s Den", "The Western Plains Where the Buffalo Roam", "A Cavern Full of Bats", "A 100 Foot Long Yacht", "A Secret Garden", "A Giant Pizza Factory", "Inside a Pyramid", "A Glass House", "A Jungle Path", "A Puppet Theater", "A Tree House", "A Thingamajig Factory", "A Building Filled with Smoke", "A Cellar in an Old Castle", "A Very Tall Building", "A San Francisco Cable Car"];
@@ -23,10 +25,17 @@
 
         function getRandomWords() {
 
-            // sets text to random value in array
-            document.getElementById("setting").innerHTML = settings[Math.floor(Math.random() * settings.length)];
-            document.getElementById("character").innerHTML = characters[Math.floor(Math.random() * characters.length)];
-            document.getElementById("challenge").innerHTML = challenges[Math.floor(Math.random() * challenges.length)];
+            if (!document.getElementById('submitButton').disabled) {
+
+                // sets text to random value in array
+                document.getElementById("setting").innerHTML = settings[Math.floor(Math.random() * settings.length)];
+                document.getElementById("character").innerHTML = characters[Math.floor(Math.random() * characters.length)];
+                document.getElementById("challenge").innerHTML = challenges[Math.floor(Math.random() * challenges.length)];
+
+                // disable button
+                document.getElementById('submitButton').disabled = true;
+                document.getElementById('submitButton').style.opacity='0.5';
+            }
         };
     </script>
 
